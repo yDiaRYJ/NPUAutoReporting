@@ -199,9 +199,9 @@ def accept_parser():
     parser.add_argument('--userName', '-u', help='学号 属性，必要参数，无默认值', required=True)
     parser.add_argument('--password', '-p', help='密码 属性，必要参数，无默认值', default=2017, required=True)
     parser.add_argument('--province', '-pr', help='省份 属性，非必要参数，必须要填全名（如宁夏回族自治区），填写SCHOOL则在学校', default='SCHOOL', required=True)
-    parser.add_argument('--city', '-c', help='城市 属性，非必要参数，必须要填全名（如合肥市）', default='1')
-    parser.add_argument('--district', '-d', help='区县 属性，非必要参数，必须要填全名（如长安区）', default='1')
-    parser.add_argument('--detailed', '-de', help='详细居住地 属性，非必要参数，如住在西安且不在学校需填写现居住地址（##街道##小区#号楼#单元#室）', default='1')
+    parser.add_argument('--city', '-c', help='城市 属性，非必要参数，必须要填全名（如合肥市）', default='')
+    parser.add_argument('--district', '-d', help='区县 属性，非必要参数，必须要填全名（如长安区）', default='')
+    parser.add_argument('--detailed', '-de', help='详细居住地 属性，非必要参数，如住在西安且不在学校需填写现居住地址（##街道##小区#号楼#单元#室）', default='')
 
     parser.add_argument('--appID', '-ai', help='appid 属性，通过微信测试公众号获取，必要参数，无默认值', required=True)
     parser.add_argument('--appSecret', '-as', help='appSecret 属性，通过微信测试公众号获取，必要参数，无默认值', required=True)
