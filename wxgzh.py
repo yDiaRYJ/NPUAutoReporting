@@ -39,7 +39,6 @@ class SendMessage():
         给所有粉丝发送文本消息
         """
         url = "https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token={}".format(self.access_token)
-        print(url)
         if self.open_id != '':
             body = {
                 "touser": self.open_id,

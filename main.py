@@ -82,6 +82,7 @@ class AutoReporting:
             # 进入疫情填报界面
             # 在学校
             if province == 'SCHOOL':
+                print("点击学校")
                 inSchool_element = wait.until(
                     EC.element_to_be_clickable((By.XPATH, '//*[@id="notlocation"]/div[1]/label[1]'))
                 )
@@ -89,16 +90,19 @@ class AutoReporting:
 
                 # 提交阶段
                 # 点击提交按钮
+                print("点击提交按钮")
                 oneSubmit_element = wait.until(
                     EC.element_to_be_clickable((By.XPATH, '//*[@id="rbxx_div"]/div[17]/div/a'))
                 )
                 oneSubmit_element.click()
                 # 点击确认真实无误按钮
+                print("点击确认真实无误按钮")
                 ensure_element = wait.until(
                     EC.element_to_be_clickable((By.XPATH, '//*[@id="qrxx_div"]/div[2]/div[11]/label'))
                 )
                 ensure_element.click()
                 # 点击确认提交按钮
+                print("点击确认提交按钮")
                 secondSubmit_element = wait.until(
                     EC.element_to_be_clickable((By.XPATH, '//*[@id="save_div"]'))
                 )
