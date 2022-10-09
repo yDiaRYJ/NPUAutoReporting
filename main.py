@@ -53,6 +53,8 @@ class AutoReporting:
 
             # 创建等待对象
             wait = WebDriverWait(web, 15) # 最多等待web 15秒
+
+            print("登陆中")
             # 进入填报的登录页面
             # 切换至密码登录
             login_element = wait.until(
@@ -76,6 +78,7 @@ class AutoReporting:
             )
             logOn_element.click()
 
+            print("填报中")
             # 进入疫情填报界面
             # 在学校
             if province == 'SCHOOL':

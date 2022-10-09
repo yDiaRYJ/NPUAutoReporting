@@ -16,14 +16,11 @@ class SendMessage():
         获取微信公众号的access_token值
         """
         url = 'https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid={}&secret={}'.format(self.appID, self.appsecret)
-        print(url)
         headers = {
             'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.67 Safari/537.36'
         }
         response = requests.get(url, headers=headers).json()
-        print("response:%s" % response)
         access_token = response.get('access_token')
-        print("token:%s" % access_token)
         return access_token
 
     # def get_openid(self):
