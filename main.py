@@ -54,6 +54,12 @@ class AutoReporting:
             # 创建等待对象
             wait = WebDriverWait(web, 15) # 最多等待web 15秒
             # 进入填报的登录页面
+            # 切换至密码登录
+            login_element = wait.until(
+                EC.element_to_be_clickable((By.XPATH, '//*[@id="vue_main"]/div[2]/div[3]/div/div[2]/div[3]/div/div/div[1]/ul/li[3]'))
+            )
+            login_element.click()
+
             # 输入账号
             userName_element = wait.until(
                 EC.presence_of_element_located((By.XPATH, '//*[@id="username"]'))
@@ -66,7 +72,7 @@ class AutoReporting:
             password_element.send_keys(password)
             # 点击登录按钮
             logOn_element = wait.until(
-                EC.element_to_be_clickable((By.XPATH, '//*[@id="fm1"]/div[4]/div/input[5]'))
+                EC.element_to_be_clickable((By.XPATH, '//*[@id="fm1"]/div[4]/div/input[6]'))
             )
             logOn_element.click()
 
