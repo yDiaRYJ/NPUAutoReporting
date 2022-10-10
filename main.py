@@ -1,3 +1,5 @@
+import time
+
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 # 导入处理<select>标签的工具
@@ -82,7 +84,10 @@ class AutoReporting:
             # 进入疫情填报界面
             # 在学校
             if province == 'SCHOOL':
+                # 等待定位
+                time.sleep(2)
                 print("点击学校")
+                # //*[@id="notlocation"]/div[1]/label[1]
                 inSchool_element = wait.until(
                     EC.element_to_be_clickable((By.XPATH, '//*[@id="notlocation"]/div[1]/label[1]'))
                 )
